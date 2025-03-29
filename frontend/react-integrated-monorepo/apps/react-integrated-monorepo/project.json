@@ -1,0 +1,86 @@
+{
+  "name": "react-integrated-monorepo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-integrated-monorepo/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react-integrated-monorepo",
+        "index": "apps/react-integrated-monorepo/src/index.html",
+        "baseHref": "/",
+        "main": "apps/react-integrated-monorepo/src/main.tsx",
+        "polyfills": "apps/react-integrated-monorepo/src/polyfills.ts",
+        "tsConfig": "apps/react-integrated-monorepo/tsconfig.app.json",
+        "assets": [
+          "apps/react-integrated-monorepo/src/favicon.ico",
+          "apps/react-integrated-monorepo/src/assets"
+        ],
+        "styles": ["apps/react-integrated-monorepo/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-integrated-monorepo/src/environments/environment.ts",
+              "with": "apps/react-integrated-monorepo/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-integrated-monorepo:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-integrated-monorepo:build:development"
+        },
+        "production": {
+          "buildTarget": "react-integrated-monorepo:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/react-integrated-monorepo/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/react-integrated-monorepo/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

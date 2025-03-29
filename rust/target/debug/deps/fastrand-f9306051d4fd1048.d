@@ -1,0 +1,8 @@
+/Users/dduru/VSCode/Private/Learning/rust/target/debug/deps/libfastrand-f9306051d4fd1048.rmeta: /Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/lib.rs /Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/global_rng.rs
+
+/Users/dduru/VSCode/Private/Learning/rust/target/debug/deps/libfastrand-f9306051d4fd1048.rlib: /Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/lib.rs /Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/global_rng.rs
+
+/Users/dduru/VSCode/Private/Learning/rust/target/debug/deps/fastrand-f9306051d4fd1048.d: /Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/lib.rs /Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/global_rng.rs
+
+/Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/lib.rs:
+/Users/dduru/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.1.0/src/global_rng.rs:
